@@ -11,6 +11,7 @@ data:extend {
     enabled = false,
     ingredients = {{type = "item", name = "stone", amount = 2}},
     results = {{type="item", name="stone-brick", amount = 2}},
-    allow_productivity = true
+    allow_productivity = true,
+    auto_recycle = false,
   },
 }

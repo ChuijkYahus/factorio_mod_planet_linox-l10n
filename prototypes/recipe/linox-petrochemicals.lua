@@ -47,5 +47,6 @@ data:extend {
       { type = "item", name = "rocket-fuel", amount = 1 },
     },
     allow_productivity = true,
+    auto_recycle = false,
   },
 }

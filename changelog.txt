@@ -1,4 +1,14 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.7.5
+Date: 4. 7. 2026
+  Bugfixes:
+    - Fixed an issue where Calcite could be obtained by recycling Stone.
+    - Fixed an issue where Stone could be obtained by recycling Calcite.
+    - Fixed an issue where recycling a B.A.D. Chest could yield both its crafting materials and additional items.
+    - Fixed an issue where recycling a Foundry could produce incorrect items.
+    - Fixed an issue where the Rocket Fuel recycling recipe was incorrectly affected by Linox.
+
+---------------------------------------------------------------------------------------------------
 Version: 1.7.4
 Date: 30. 6. 2026
   Bugfixes:

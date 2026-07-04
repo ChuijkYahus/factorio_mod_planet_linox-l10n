@@ -29,6 +29,7 @@ data:extend {
       }
     },
     energy_required = 10,
-    results = {{type="item", name="foundry", amount=1}}
+    results = {{type="item", name="foundry", amount=1}},
+    auto_recycle = false,
   },
 }

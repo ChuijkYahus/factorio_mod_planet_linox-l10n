@@ -15,5 +15,6 @@ data:extend {
     },
     results = {{type="item", name="stone", amount=50}},
     allow_productivity = true,
+    auto_recycle = false,
   },
 }

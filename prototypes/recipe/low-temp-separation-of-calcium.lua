@@ -26,7 +26,8 @@ local recipe = {
       }
     },
   results = {{type="item", name="calcite", amount=1}},
-allow_productivity = true,
+  allow_productivity = true,
+  auto_recycle = false,
 }
 
 data:extend { recipe, }

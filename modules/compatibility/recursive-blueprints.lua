@@ -40,7 +40,10 @@ __MODULE__.data_update = function()
     {type = "item", name = "electronic-circuit", amount = 1},
     {type = "item", name = "iron-plate", amount = 10},
   }
+  data.raw["recipe"]["blueprint-deployer2"].auto_recycle = false
 
+  data.raw["recipe"]["blueprint-deployer2-recycling"].ingredients = {{type = "item", name = "blueprint-deployer2", amount = 1}}
+  data.raw["recipe"]["blueprint-deployer2-recycling"].results = {{type="item", name="blueprint-deployer2", amount = 1, independent_probability = 0.25}}
 
 end
 
