@@ -1,4 +1,13 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.7.6
+Date: 6. 7. 2026
+  Bugfixes:
+    - Fixed an issue where the Neodymium Permanent Magnet Generator graphics were not displayed correctly.
+
+  Changes:
+    - Slightly optimized the Power Converter logic.
+
+---------------------------------------------------------------------------------------------------
 Version: 1.7.5
 Date: 4. 7. 2026
   Bugfixes:

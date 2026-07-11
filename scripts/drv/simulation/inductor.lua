@@ -3,9 +3,8 @@ local stor = require("scripts.drv.storage")
 stor.ensure("game_data.inductor", {
   enable = false,
   current = 0.0,
-
   V_div_L = 0,
-});
+})
 
 local SIM_UPS = 60.0
 local SIM_FREQ = 500.0
@@ -23,26 +22,22 @@ local SIM_R_DIV_L = (SIM_R / SIM_L) * SIM_FREQ_T
 --  reluctance = 0.007,
 --}
 
-local __MODULE__ = {}
+local __MODULE__ = {
+  current = 0
+}
 
 __MODULE__.tick = function()
-  local inductor_data = storage.game_data.inductor
+  local stor = storage.game_data.inductor
 
-  if inductor_data.enable then
-    local current = inductor_data.current
-
+  if stor.enable then
     for i = 0, SIM_FREQ_C do
       --current = current + ((inductor_data.V_div_L) - (SIM_R_DIV_L * current)) * SIM_FREQ_T
-      current = current + ((inductor_data.V_div_L) - (SIM_R_DIV_L * current))
+      stor.current = stor.current + ((stor.V_div_L) - (SIM_R_DIV_L * stor.current))
     end
-
-    inductor_data.current = current;
   else
-    inductor_data.current = 0.0
+    stor.current = 0.0
   end
-
-  storage.game_data.inductor = inductor_data
-  __MODULE__.current = inductor_data.current;
+  __MODULE__.current = stor.current;
 end
 
 __MODULE__.apply_voltage = function(volt)
@@ -50,7 +45,13 @@ __MODULE__.apply_voltage = function(volt)
 end
 
 __MODULE__.enable = function(en)
-  storage.game_data.inductor.enable = en
+  local stor = storage.game_data.inductor
+  stor.enable = en
+  if en == 0 then
+    __MODULE__.current = 0
+    stor.current = 0
+    stor.V_div_L = 0
+  end
 end
 
 return __MODULE__

@@ -13,6 +13,8 @@ local __MODULE__ = {};
 local __base_foundation_tile  = "linox-tile_linox-terminal-platform"
 local __base_border_tile      = "linox-tile_linox-hazard-terminal-platform"
 
+local __surface = nil
+
 bootstrap.create_init_handler(function()
   local surface = __MODULE__.get()
   if surface then
@@ -117,7 +119,10 @@ UTIL_create_event_handler(defines.events.on_surface_created, function(event)
 end)
 
 __MODULE__.get = function()
-  return game.get_surface(__LINOX_SURFACE__.facility)
+  if __surface == nil or __surface.valid == false then
+    __surface = game.get_surface(__LINOX_SURFACE__.facility)
+  end
+  return __surface
 end
 
 __MODULE__.create = function()

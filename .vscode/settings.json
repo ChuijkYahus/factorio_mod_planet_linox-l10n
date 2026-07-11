@@ -1,12 +1,9 @@
 {
   "factorio.versions": [
     {
-      "name": "2.0.77",
-      "factorioPath": "c:\\factorio\\bin\\x64\\factorio.exe"
+      "name": "factorio_linox",
+      "factorioPath": "c:\\factorio_linox\\bin\\x64\\factorio.exe"
     },
-  ],
-  "Lua.workspace.userThirdParty": [
-    "c:\\Users\\axzs3\\AppData\\Roaming\\Code\\User\\workspaceStorage\\f0f083503ec1c8dab7bebce4a4dd903d\\justarandomgeek.factoriomod-debug\\sumneko-3rd"
   ],
   "Lua.workspace.checkThirdParty": "ApplyInMemory",
   "Lua.diagnostics.globals": [
@@ -19,5 +16,8 @@
   ],
   "Lua.diagnostics.disable": [
     "different-requires"
+  ],
+  "Lua.workspace.userThirdParty": [
+    "c:\\Users\\axzs3\\AppData\\Roaming\\Code\\User\\workspaceStorage\\87c52e0a7b669f8961489fcc5d687b55\\justarandomgeek.factoriomod-debug\\sumneko-3rd"
   ],
 }
