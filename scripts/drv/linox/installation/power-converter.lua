@@ -9,6 +9,9 @@ stor.ensure("game_data.power_converter_entity", {
   input = nil,
   output = nil,
   reactive_entity = nil,
+  researched = nil,
+  capacity_level = nil,
+  last_output = nil,
 })
 
 local function _create_circuit_entity(name, pos)
@@ -100,8 +103,10 @@ __MODULE__.get_entities = function()
     end
   end
 
-  local tech = game.forces["player"].technologies["linox-technology_power-converter"]
-  if tech.researched and (stor.reactive_entity == nil or stor.reactive_entity.valid == false) then
+  if stor.researched == nil then
+    stor.researched = game.forces["player"].technologies["linox-technology_power-converter"].researched
+  end
+  if stor.researched and (stor.reactive_entity == nil or stor.reactive_entity.valid == false) then
     stor.reactive_entity = surface.find_entity("linox-hidden_reactive-power", {0,0})
   end
 
@@ -118,8 +123,16 @@ end
 
 __MODULE__.set_signal = function(output_type, slot, value)
   local stor = storage.game_data.power_converter_entity
+  if stor.last_output and stor.last_output[slot] == value then
+    return
+  end
   if stor.output and stor.output.valid then
     circuit.set_entity_signal(stor.output, slot, output_type, value);
+
+    if stor.last_output == nil then
+      stor.last_output = {}
+    end
+    stor.last_output[slot] = value
   end
 end
 

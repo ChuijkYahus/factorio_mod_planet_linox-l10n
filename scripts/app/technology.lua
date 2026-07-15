@@ -104,7 +104,11 @@ local function __update_technology(event)
 
   if tech["linox-technology_power-converter"].researched then
     UTIL_ensure_entity(linox_facility.get(), { name = "linox-hidden_reactive-power"}).energy = 1 * 1000 * 1000 * 1000;
+    storage.game_data.power_converter_entity.researched = true
+  else
+    storage.game_data.power_converter_entity.researched = false
   end
+  storage.game_data.power_converter_entity.capacity_level = tech["linox-technology_planetary-power-converter-capacity"].level
 
   if tech["linox-technology_outer-corridor-open"].researched then
     linox_facility.create_outer_corridor();
