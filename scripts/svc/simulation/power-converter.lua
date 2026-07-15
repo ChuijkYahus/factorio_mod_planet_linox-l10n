@@ -9,23 +9,15 @@ local tick_GJ = GJ / 60.0
 
 local function __get_total_consume(surface)
   local consume = 0.0
-  local stat = surface.global_electric_network_statistics;
-  if stat then
-    for name, _ in pairs(stat.input_counts) do
-      --if not is_buggy
-      consume = consume + stat.get_flow_count {
-        precision_index = defines.flow_precision_index.five_seconds,
-        category = "input",
-        count = false,
-        sample_index = 1,
-        name  = name,
-      }
-    end
+  local net = surface.global_electric_network
+  if net then
+    return net.parent_network.flow_last_tick.total_transfer
   end
   return consume
 end
 
 bootstrap.create_tick_handler(function()
+  local stor = storage.game_data.power_converter_entity
   local entities = power_converter.get_entities()
   if entities and entities.reactive_entity then
     if entities.reactive_entity.force.name ~= "player" then return end
@@ -62,11 +54,13 @@ bootstrap.create_tick_handler(function()
       if reactive_power_usage > current_tick_consume then
         reactive_power_usage = current_tick_consume
       end
-      
-      entities.reactive_entity.power_usage = reactive_power_usage
 
-      local tech = game.forces["player"].technologies["linox-technology_planetary-power-converter-capacity"]
-      entities.pc_entity.electric_buffer_size = (5.0 + ((tech.level - 1) * 2.5)) * GJ
+      if stor.capacity_level == nil then
+        stor.capacity_level = game.forces["player"].technologies["linox-technology_planetary-power-converter-capacity"].level
+      end
+
+      entities.reactive_entity.power_usage = reactive_power_usage
+      entities.pc_entity.electric_buffer_size = (5.0 + ((stor.capacity_level - 1) * 2.5)) * GJ
 
       power_converter.set_signal(power_converter.output_type.output_power, 1, inductor.current * voltage);
       power_converter.set_signal(power_converter.output_type.current_power, 2, math.floor(current_tick_consume * 60.0));-- / voltage));
