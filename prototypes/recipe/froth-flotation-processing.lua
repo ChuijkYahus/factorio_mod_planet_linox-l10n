@@ -7,13 +7,12 @@ data:extend {
       {
         icon = "__core__/graphics/icons/controller/ps/color/circle.png",
         icon_size = 40,
-        scale = 1.6,
+        scale = 0.8,
       },
       {
         icon = "__linox__/graphics/icons/rare-earth-powder.png",
         icon_size = 64,
-        scale = 0.85,
-        floating = true,
+        scale = 0.425,
       }
     },
     

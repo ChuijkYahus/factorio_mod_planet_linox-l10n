@@ -1,4 +1,14 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.7.7
+Date: 17. 7. 2026
+  Changes:
+    - Significantly improved the performance of the Power Converter logic. Special thanks to zhuyifei1999 for providing this optimization.
+    - The AAI Signal Transmission settings have been reorganized. As a result, your existing settings may have been reset, so please review and reconfigure them if necessary.
+
+  Bugfixes:
+    - Fixed an issue where the Froth Flotation Processing recipe icon could appear incorrectly under certain conditions.
+
+---------------------------------------------------------------------------------------------------
 Version: 1.7.6
 Date: 6. 7. 2026
   Bugfixes:

@@ -2,12 +2,7 @@ local __MODULE__ = {}
 
 __MODULE__.data_update = function()
   if mods["aai-signal-transmission"] then
-    if settings.startup["linox-settings_disable-aai-signal-transmission"].value then
-      data.raw.technology["aai-signal-transmission"] = nil
-      data.raw.recipe["aai-signal-sender"] = nil
-      data.raw.recipe["aai-signal-receiver"] = nil
-  
-    elseif not settings.startup["linox-settings_disconnect-aai-signal-transmission"].value then
+    if settings.startup["linox-settings_compatibility-aai-signal-transmission"].value then
       local tech = data.raw.technology["aai-signal-transmission"]
       tech.prerequisites = {
         "processing-unit",

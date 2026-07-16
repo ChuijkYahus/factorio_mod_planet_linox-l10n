@@ -1,13 +1,6 @@
 data:extend {
   {
     type = "bool-setting",
-    name = "linox-settings_elevator-boarding-alert",
-    setting_type = "runtime-per-user",
-    default_value = true
-  },
-
-  {
-    type = "bool-setting",
     name = "linox-settings_remove-logistic-system",
     setting_type = "startup",
     default_value = false
@@ -36,16 +29,9 @@ data:extend {
 
   {
     type = "bool-setting",
-    name = "linox-settings_disconnect-aai-signal-transmission",
+    name = "linox-settings_compatibility-aai-signal-transmission",
     setting_type = "startup",
-    default_value = false
-  },
-
-  {
-    type = "bool-setting",
-    name = "linox-settings_disable-aai-signal-transmission",
-    setting_type = "startup",
-    default_value = false
+    default_value = true
   },
 
   {
@@ -55,6 +41,8 @@ data:extend {
     default_value = true,
   },
 
+
+
   {
     type = "string-setting",
     name = "linox-settings_rbp-example-multiplay-language",
@@ -63,12 +51,21 @@ data:extend {
     allowed_values = {"auto", "en", "ko", "ru"},
   },
 
+  
+
   {
     type = "string-setting",
     name = "linox-settings_rbp-example-local-language",
     setting_type = "runtime-per-user",
     default_value = "auto",
     allowed_values = {"auto", "en", "ko", "ru"},
+  },
+
+  {
+    type = "bool-setting",
+    name = "linox-settings_elevator-boarding-alert",
+    setting_type = "runtime-per-user",
+    default_value = true
   },
 }
 
