@@ -18,7 +18,7 @@ __MODULE__.control = function()
 
       tech["logistic-robotics"].researched = true
       tech["construction-robotics"].researched = true
-      if not settings.startup["linox-settings_remove-logistic-system"].value then
+      if not settings.startup["linox-settings_hard-mode_no-logistic-system"].value then
         tech["logistic-system"].researched = true
       end
 

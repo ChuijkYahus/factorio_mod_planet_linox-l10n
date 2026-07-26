@@ -590,3 +590,39 @@ data:extend {
     ignore_tech_cost_multiplier = true,
   },
 }
+
+if settings.startup["linox-settings_hard-mode_enable-science-pack_aquilo"].value or settings.startup["linox-settings_hard-mode_enable-science-pack_promethium"].value then
+  data:extend {
+    {
+      type = "technology",
+      name = "linox-technology_linox-science-pack",
+      order = "linox",
+      icon = "__linox__/graphics/icons/linox-science-pack_256.png",
+      icon_size = 256,
+      prerequisites = {
+        "linox-technology_neodymium-data-card",
+        "linox-technology_erbium-data-card",
+      },
+      unit =
+      {
+        count = 1000,
+        ingredients =
+        {
+          {"linox-item_lava-data-card", 1},
+          {"linox-item_rare-earth-data-card", 1},
+          {"linox-item_samarium-data-card", 1},
+          {"linox-item_dysprosium-data-card", 1},
+          {"linox-item_neodymium-data-card", 1},
+          {"linox-item_erbium-data-card", 1},
+        },
+        time = 60
+      },
+      effects =
+      {
+        { type = "unlock-recipe", recipe = "linox-item_linox-science-pack" },
+      },
+      ignore_tech_cost_multiplier = true,
+      essential = true,
+    },
+  }
+end

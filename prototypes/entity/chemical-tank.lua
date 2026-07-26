@@ -44,7 +44,7 @@ data:extend {
       drain = "50kW",
       emissions_per_minute = { pollution = 4 }
     },
-    forced_symmetry = "horizontal",
+    use_mirroring = true,
 
     circuit_wire_max_distance = 10,
     circuit_connector = circuit_connector_definitions["electromagnetic-plant"],
@@ -173,19 +173,7 @@ data:extend {
       {type = "item", name = "tungsten-gear-wheel", amount = 10},
       {type = "item", name = "tungsten-stick", amount = 10},
     },
-    --surface_conditions =
-    --{
-    --  {
-    --    property = "magnetic-field",
-    --    min = 1600,
-    --    max = 1600,
-    --  },
-    --  {
-    --    property = "gravity",
-    --    min = 2,
-    --    max = 2
-    --  },
-    --},
+    
     results = {{type = "item", name = "linox-building_chemical-tank", amount = 1}}
   },
 }

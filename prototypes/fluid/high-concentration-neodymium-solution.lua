@@ -34,19 +34,7 @@ data:extend {
     order = "linox-neodymium-b",
     auto_recycle = false,
     enabled = false,
-    surface_conditions =
-    {
-      {
-        property = "magnetic-field",
-        min = 1600,
-        max = 1600,
-      },
-      {
-        property = "gravity",
-        min = 2,
-        max = 2
-      }
-    },
+    surface_conditions = __LINOX_SURFACE_CONDITION__,
     ingredients =
     {
       {type = "fluid", name = "low-concentration-neodymium-solution", amount = 100},

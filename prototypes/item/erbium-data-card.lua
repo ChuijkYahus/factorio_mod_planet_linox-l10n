@@ -38,19 +38,7 @@ local recipe = {
     {type = "item", name = "solid-fuel", amount = 2},
     {type = "fluid", name = "lava", amount = 100},
   },
-  surface_conditions =
-    {
-      {
-        property = "magnetic-field",
-        min = 1600,
-        max = 1600,
-      },
-      {
-        property = "gravity",
-        min = 2,
-        max = 2
-      }
-    },
+  surface_conditions = __LINOX_SURFACE_CONDITION__,
   results = {{type="item", name="linox-item_erbium-data-card", amount=5}},
   allow_productivity = true,
   auto_recycle = false,

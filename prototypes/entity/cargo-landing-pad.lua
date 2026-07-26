@@ -1,8 +1,8 @@
 local entity = table.deepcopy(data.raw["cargo-landing-pad"]["cargo-landing-pad"]);
 
 entity.name = "linox-building_cargo-landing-pad";
-entity.inventory_size = 40;
-entity.trash_inventory_size = 10;
+entity.inventory_size = 80;
+entity.trash_inventory_size = 20;
 entity.radar_range = 5;
 entity.minable = nil
 entity.map_color = { 1, 1, 1 }

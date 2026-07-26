@@ -63,18 +63,7 @@ data:extend {
       {type = "item", name = "beacon", amount = 1},
       {type = "item", name = "erbium-powder", amount = 2},
     },
-    --surface_conditions = {
-    --  {
-    --    property = "magnetic-field",
-    --    min = 1600,
-    --    max = 1600,
-    --  },
-    --  {
-    --    property = "gravity",
-    --    min = 2,
-    --    max = 2
-    --  }
-    --},
+    
     results = {{type="item", name="linox-building_erbium-beacon", amount=1}}
   },
 }

@@ -13,19 +13,7 @@ data:extend {
       {type = "fluid", name = "lava", amount = 150, fluidbox_index = 1},
       {type = "fluid", name = "crude-oil", amount = 50, fluidbox_index = 2},
     },
-    surface_conditions =
-    {
-      {
-        property = "magnetic-field",
-        min = 1600,
-        max = 1600,
-      },
-      {
-        property = "gravity",
-        min = 2,
-        max = 2
-      }
-    },
+    surface_conditions = __LINOX_SURFACE_CONDITION__,
     results = {
       { type = "item", name = "coal", amount = 5 },
     },

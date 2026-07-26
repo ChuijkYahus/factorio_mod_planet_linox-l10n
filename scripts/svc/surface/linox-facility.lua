@@ -183,88 +183,91 @@ __MODULE__.expand_facility = function(level)
     end
     rbp_example.build(surface, {x = 0, y = -64}, loc)
 
-    local stor = surface.find_entities_filtered{name = "storage-chest", position = { 0, -64 }, radius = 25}
-    if stor then
-      stor[1].insert{ name = "chemical-plant", count = 10 }
-      stor[1].insert{ name = "pipe", count = 100 }
-      stor[1].insert{ name = "speed-module-3", count = 36 }
-      stor[1].insert{ name = "bulk-inserter", count = 25 }
-      if not settings.startup["linox-settings_remove-logistic-system"].value then
-        stor[1].insert{ name = "requester-chest", count = 10 }
-        stor[1].insert{ name = "active-provider-chest", count = 10 }
+
+    if not settings.startup["linox-settings_hard-mode_no-starter-pack"].value then
+      local stor = surface.find_entities_filtered{name = "storage-chest", position = { 0, -64 }, radius = 25}
+      if stor then
+        stor[1].insert{ name = "chemical-plant", count = 10 }
+        stor[1].insert{ name = "pipe", count = 100 }
+        stor[1].insert{ name = "speed-module-3", count = 36 }
+        stor[1].insert{ name = "bulk-inserter", count = 25 }
+        if not settings.startup["linox-settings_hard-mode_no-logistic-system"].value then
+          stor[1].insert{ name = "requester-chest", count = 10 }
+          stor[1].insert{ name = "active-provider-chest", count = 10 }
+        end
+        stor[1].insert{ name = "beacon", count = 20 }
+        stor[1].insert{ name = "pipe-to-ground", count = 10 }
+        stor[1].insert{ name = "turbo-transport-belt", count = 200 }
+        stor[1].insert{ name = "turbo-underground-belt", count = 25 }
+        stor[1].insert{ name = "assembling-machine-3", count = 5 }
+        stor[1].insert{ name = "productivity-module-3", count = 10 }
+        stor[1].insert{ name = "foundry", count = 5 }
+
+        stor[2].insert{ name = "stone", count = 1500 }
+        stor[2].insert{ name = "concrete", count = 500 }
+        stor[3].insert{ name = "efficiency-module-3", count = 12 }
       end
-      stor[1].insert{ name = "beacon", count = 20 }
-      stor[1].insert{ name = "pipe-to-ground", count = 10 }
-      stor[1].insert{ name = "turbo-transport-belt", count = 200 }
-      stor[1].insert{ name = "turbo-underground-belt", count = 25 }
-      stor[1].insert{ name = "assembling-machine-3", count = 5 }
-      stor[1].insert{ name = "productivity-module-3", count = 10 }
-      stor[1].insert{ name = "foundry", count = 5 }
-
-      stor[2].insert{ name = "stone", count = 1500 }
-      stor[2].insert{ name = "concrete", count = 500 }
-      stor[3].insert{ name = "efficiency-module-3", count = 12 }
-    end
 
 
-    local box1 = surface.create_entity{name = "steel-chest", force = "player", position = { 11, -60 }}
-    if box1 then
-      box1.insert{name = "steel-plate", count = 1000};
-      box1.insert{name = "electronic-circuit", count = 800};
-      box1.insert{name = "advanced-circuit", count = 1200};
-      box1.insert{name = "processing-unit", count = 600};
-      box1.insert{name = "iron-plate", count = 300};
-      box1.insert{name = "copper-plate", count = 300};
-    end
-
-    local box2 = surface.create_entity{name = "steel-chest", force = "player", position = { 11, -59 }}
-    if box2 then
-      box2.insert{name = "tungsten-ore", count = 300};
-      box2.insert{name = "tungsten-carbide", count = 500};
-      box2.insert{name = "tungsten-plate", count = 300};
-    end
-
-    local box3 = surface.create_entity{name = "steel-chest", force = "player", position = { 11, -58 }}
-    if box3 then
-      box3.insert{name = "logistic-robot", count = 500};
-      box3.insert{name = "construction-robot", count = 500};
-      box3.insert{name = "linox-building_core-roboport", count = 12};
-      box3.insert{name = "electric-engine-unit", count = 250};
-    end
-
-    local box4 = surface.create_entity{name = "steel-chest", force = "player", position = { 11, -57 }}
-    if box4 then
-      box4.insert{name = "rocket-silo", count = 1};
-      box4.insert{name = "concrete", count = 1500};
-      box4.insert{name = "refined-concrete", count = 1500};
-      box4.insert{name = "electric-engine-unit", count = 250};
-    end
-
-    local box5 = surface.create_entity{name = "steel-chest", force = "player", position = { 11, -56 }}
-    if box5 then
-      box5.insert{name = "plastic-bar", count = 1000};
-      box5.insert{name = "rocket-fuel", count = 120};
-    end
-
-    local box6 = surface.create_entity{name = "steel-chest", force = "player", position = { 11, -55 }}
-    if box6 then
-      box6.insert{name = "foundry", count = 10};
-      box6.insert{name = "assembling-machine-3", count = 30};
-      box6.insert{name = "chemical-plant", count = 20};
-      box6.insert{name = "solar-panel", count = 30};
-      box6.insert{name = "offshore-pump", count = 10};
-      box6.insert{name = "linox-building_fluid-elevator", count = 5};
-      box6.insert{name = "linox-building_cargo-elevator", count = 5};
-      box6.insert{name = "bulk-inserter", count = 200};
-      if not settings.startup["linox-settings_remove-logistic-system"].value then
-        box6.insert{name = "requester-chest", count = 25 }
-        box6.insert{name = "active-provider-chest", count = 25 }
+      local box1 = surface.create_entity{name = "steel-chest", force = "player", position = { 11, -60 }}
+      if box1 then
+        box1.insert{name = "steel-plate", count = 1000};
+        box1.insert{name = "electronic-circuit", count = 800};
+        box1.insert{name = "advanced-circuit", count = 1200};
+        box1.insert{name = "processing-unit", count = 600};
+        box1.insert{name = "iron-plate", count = 300};
+        box1.insert{name = "copper-plate", count = 300};
       end
-      box6.insert{name = "storage-chest", count = 25 }
-      box6.insert{name = "beacon", count = 5 }
-      box6.insert{name = "speed-module-2", count = 50 }
-      box6.insert{name = "productivity-module-2", count = 50 }
-      box6.insert{name = "efficiency-module-2", count = 50 }
+
+      local box2 = surface.create_entity{name = "steel-chest", force = "player", position = { 11, -59 }}
+      if box2 then
+        box2.insert{name = "tungsten-ore", count = 300};
+        box2.insert{name = "tungsten-carbide", count = 500};
+        box2.insert{name = "tungsten-plate", count = 300};
+      end
+
+      local box3 = surface.create_entity{name = "steel-chest", force = "player", position = { 11, -58 }}
+      if box3 then
+        box3.insert{name = "logistic-robot", count = 500};
+        box3.insert{name = "construction-robot", count = 500};
+        box3.insert{name = "linox-building_core-roboport", count = 12};
+        box3.insert{name = "electric-engine-unit", count = 250};
+      end
+
+      local box4 = surface.create_entity{name = "steel-chest", force = "player", position = { 11, -57 }}
+      if box4 then
+        box4.insert{name = "rocket-silo", count = 1};
+        box4.insert{name = "concrete", count = 1500};
+        box4.insert{name = "refined-concrete", count = 1500};
+        box4.insert{name = "electric-engine-unit", count = 250};
+      end
+
+      local box5 = surface.create_entity{name = "steel-chest", force = "player", position = { 11, -56 }}
+      if box5 then
+        box5.insert{name = "plastic-bar", count = 1000};
+        box5.insert{name = "rocket-fuel", count = 120};
+      end
+
+      local box6 = surface.create_entity{name = "steel-chest", force = "player", position = { 11, -55 }}
+      if box6 then
+        box6.insert{name = "foundry", count = 10};
+        box6.insert{name = "assembling-machine-3", count = 30};
+        box6.insert{name = "chemical-plant", count = 20};
+        box6.insert{name = "solar-panel", count = 30};
+        box6.insert{name = "offshore-pump", count = 10};
+        box6.insert{name = "linox-building_fluid-elevator", count = 5};
+        box6.insert{name = "linox-building_cargo-elevator", count = 5};
+        box6.insert{name = "bulk-inserter", count = 200};
+        if not settings.startup["linox-settings_hard-mode_no-logistic-system"].value then
+          box6.insert{name = "requester-chest", count = 25 }
+          box6.insert{name = "active-provider-chest", count = 25 }
+        end
+        box6.insert{name = "storage-chest", count = 25 }
+        box6.insert{name = "beacon", count = 5 }
+        box6.insert{name = "speed-module-2", count = 50 }
+        box6.insert{name = "productivity-module-2", count = 50 }
+        box6.insert{name = "efficiency-module-2", count = 50 }
+      end
     end
 
   elseif level == 2 then

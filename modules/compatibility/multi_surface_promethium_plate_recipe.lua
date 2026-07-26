@@ -24,19 +24,7 @@ __MODULE__.data = function()
         name = "msppr-linox",
         subgroup = "science-pack",
         category = "linox-recipe-category_sintering",
-        surface_conditions =
-        {
-          {
-            property = "magnetic-field",
-            min = 1600,
-            max = 1600,
-          },
-          {
-            property = "gravity",
-            min = 2,
-            max = 2
-          }
-        },
+        surface_conditions =__LINOX_SURFACE_CONDITION__,
         enabled = false,
         ingredients = {
             { type = "item", name = "dysprosium-powder", amount = 1 },

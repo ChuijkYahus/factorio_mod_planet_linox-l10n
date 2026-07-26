@@ -59,6 +59,7 @@ data:extend {
 
     circuit_wire_max_distance = 10,
     circuit_connector = circuit_connector_definitions["biochamber"],
+    use_mirroring = true,
 
     fluid_boxes =
     {
@@ -197,19 +198,6 @@ data:extend {
       {type = "item", name = "samarium", amount = 2},
       {type = "item", name = "dysprosium-powder", amount = 2},
     },
-    --surface_conditions =
-    --{
-    --  {
-    --    property = "magnetic-field",
-    --    min = 1600,
-    --    max = 1600,
-    --  },
-    --  {
-    --    property = "gravity",
-    --    min = 2,
-    --    max = 2
-    --  },
-    --},
     results = {{type = "item", name = "linox-building_chemical-filter", amount = 1}}
   },
 }

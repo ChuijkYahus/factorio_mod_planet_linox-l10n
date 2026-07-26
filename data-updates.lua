@@ -1,4 +1,4 @@
-if not settings.startup["linox-settings_remove-logistic-system"].value then
+if not settings.startup["linox-settings_hard-mode_no-logistic-system"].value then
   table.insert(data.raw["technology"]["linox-technology_planet-discovery-linox"].prerequisites, "logistic-system")
 end
 

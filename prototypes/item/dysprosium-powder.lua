@@ -39,18 +39,6 @@ data:extend {
     main_product = "dysprosium-powder",
     maximum_productivity = 5.0,
 
-    surface_conditions =
-    {
-      {
-        property = "magnetic-field",
-        min = 1600,
-        max = 1600,
-      },
-      {
-        property = "gravity",
-        min = 2,
-        max = 2
-      }
-    },
+    surface_conditions = __LINOX_SURFACE_CONDITION__,
   }
 }

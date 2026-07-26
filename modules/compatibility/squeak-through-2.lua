@@ -1,7 +1,7 @@
 local __MODULE__ = {}
 
 __MODULE__.data_update = function()
-  if not mods["squeak-through-2"] and settings.startup["linox-settings_remove-vanilla-circuit-collision"].value then
+  if not mods["squeak-through-2"] and settings.startup["linox-settings_easy-mode_remove-vanilla-circuit-collision"].value then
     local raws = {
       data.raw["lamp"]["small-lamp"],
   

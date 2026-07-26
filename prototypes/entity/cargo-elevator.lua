@@ -9,10 +9,7 @@ entity.fast_replaceable_group = "transport-belt";
 entity.next_upgrade = nil;
 entity.belt_animation_set = ref_belt.belt_animation_set;
 entity.speed = ref_belt.speed;
-entity.surface_conditions = {
-  { property = "magnetic-field", min = 1600, max = 1600 },
-  { property = "gravity", min = 2, max = 2, }
-}
+entity.surface_conditions = __LINOX_SURFACE_CONDITION__
 entity.tile_buildability_rules = {
   {
     area = {{-0.4, -0.4}, {0.4, 0.4}},
@@ -52,19 +49,7 @@ local recipe = {
     {type = "item", name = "iron-plate", amount = 10},
     {type = "item", name = "copper-plate", amount = 10},
   },
-  surface_conditions =
-  {
-    {
-      property = "magnetic-field",
-      min = 1600,
-      max = 1600,
-    },
-    {
-      property = "gravity",
-      min = 2,
-      max = 2
-    },
-  },
+  surface_conditions = __LINOX_SURFACE_CONDITION__,
   results = {{type="item", name="linox-building_cargo-elevator", amount=2}}
 }
 

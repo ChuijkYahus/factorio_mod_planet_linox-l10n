@@ -37,19 +37,7 @@ local recipe = {
     {type = "item", name = "processing-unit", amount = 2},
     {type = "item", name = "tungsten-carbide", amount = 1},
   },
-  surface_conditions =
-    {
-      {
-        property = "magnetic-field",
-        min = 1600,
-        max = 1600,
-      },
-      {
-        property = "gravity",
-        min = 2,
-        max = 2
-      }
-    },
+  surface_conditions = __LINOX_SURFACE_CONDITION__,
   results = {{type="item", name="linox-item_samarium-data-card", amount=3}},
   allow_productivity = true,
   auto_recycle = false,
