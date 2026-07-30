@@ -6,7 +6,7 @@ data:extend {
     type = "tool",
     name = "linox-item_linox-science-pack",
     localised_description = {"item-description.linox-item_linox-science-pack"},
-    icon = "__linox__/graphics/icons/linox-science-pack_64.png",
+    icon = "__space-exploration-graphics__/graphics/icons/vulcanite-block.png",
     icon_size = 64,
     subgroup = "science-pack",
     color_hint = { text = "L" },

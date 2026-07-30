@@ -7,7 +7,7 @@ data:extend {
     order = "linox",
     icons = {
       {
-        icon = "__space-exploration-graphics__/graphics/technology/supercomputer-3.png",
+        icon = "__space-exploration-graphics__/graphics/technology/supercomputer-1.png",
         icon_size = 128,
       },
       {

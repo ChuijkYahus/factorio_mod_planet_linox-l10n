@@ -33,7 +33,7 @@ data:extend {
       type = "technology",
       name = "linox-technology_linox-supercomputer",
       order = "linox",
-      icons = util_icon.technology_icon_script_research("__space-exploration-graphics__/graphics/technology/supercomputer-3.png", 128),
+      icons = util_icon.technology_icon_script_research("__space-exploration-graphics__/graphics/technology/supercomputer-1.png", 128),
       prerequisites = {"linox-technology_laboratory-database"},
       research_trigger = {
         type = "scripted",
