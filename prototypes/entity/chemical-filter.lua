@@ -4,16 +4,7 @@ local hit_effects = require("__base__.prototypes.entity.hit-effects")
 local item_sounds = require("__base__.prototypes.item_sounds")
 
 local pipe_pic = table.deepcopy(require("__space-age__.prototypes.entity.electromagnetic-plant-pictures").pipe_pictures)
-pipe_pic.north.layers[2] = nil
-pipe_pic.east.layers[2] = nil
-pipe_pic.south.layers[2] = nil
-pipe_pic.west.layers[2] = nil
-
 local pipe_covers = table.deepcopy(pipecoverspictures())
-pipe_covers.north.layers[2] = nil
-pipe_covers.east.layers[2] = nil
-pipe_covers.south.layers[2] = nil
-pipe_covers.west.layers[2] = nil
 
 data:extend {
   {

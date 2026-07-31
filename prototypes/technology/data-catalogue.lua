@@ -597,8 +597,8 @@ if settings.startup["linox-settings_hard-mode_enable-science-pack_aquilo"].value
       type = "technology",
       name = "linox-technology_linox-science-pack",
       order = "linox",
-      icon = "__linox__/graphics/icons/linox-science-pack_256.png",
-      icon_size = 256,
+      icon = "__space-exploration-graphics__/graphics/technology/vulcanite-processing.png",
+      icon_size = 128,
       prerequisites = {
         "linox-technology_neodymium-data-card",
         "linox-technology_erbium-data-card",

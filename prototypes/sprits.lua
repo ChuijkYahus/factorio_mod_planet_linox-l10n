@@ -38,7 +38,7 @@ data:extend {
   {
     type = "sprite",
     name = "linox-sprite_linox-supercomputer",
-    filename = "__space-exploration-graphics__/graphics/technology/supercomputer-3.png",
+    filename = "__space-exploration-graphics__/graphics/technology/supercomputer-1.png",
     size = 128,
   },
 
@@ -47,7 +47,7 @@ data:extend {
     name = "linox-sprite_lorax-support",
     layers = {
       {
-        filename = "__space-exploration-graphics__/graphics/technology/supercomputer-3.png",
+        filename = "__space-exploration-graphics__/graphics/technology/supercomputer-1.png",
         size = 128,
       },
       {

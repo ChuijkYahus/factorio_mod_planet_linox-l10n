@@ -17,7 +17,8 @@
   "Lua.diagnostics.disable": [
     "different-requires",
     "missing-fields",
-    "assign-type-mismatch"
+    "assign-type-mismatch",
+    "param-type-mismatch"
   ],
   "Lua.workspace.userThirdParty": [
     "c:\\Users\\axzs3\\AppData\\Roaming\\Code\\User\\workspaceStorage\\87c52e0a7b669f8961489fcc5d687b55\\justarandomgeek.factoriomod-debug\\sumneko-3rd"

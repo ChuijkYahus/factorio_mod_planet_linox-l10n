@@ -1,3 +1,4 @@
+---@diagnostic disable: need-check-nil
 local linox_map_gen = require("prototypes.planet.map-gen")
 local effects = require("prototypes.planet.effect")
 local asteroid_util = require("__space-age__.prototypes.planet.asteroid-spawn-definitions")

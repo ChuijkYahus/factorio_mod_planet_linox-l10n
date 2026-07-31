@@ -4,7 +4,7 @@ data:extend {
   {
     type = "lab",
     name = "linox-building_linox-supercomputer",
-    icon = "__space-exploration-graphics__/graphics/icons/supercomputer-3.png",
+    icon = "__space-exploration-graphics__/graphics/icons/supercomputer-1.png",
     icon_size = 64,
     flags = {"placeable-player", "player-creation"},
     minable = {mining_time = 0.5, result = "linox-building_linox-supercomputer"},
@@ -68,7 +68,7 @@ data:extend {
       layers =
       {
         {
-          filename = "__space-exploration-graphics-5__/graphics/entity/supercomputer/supercomputer-3.png",
+          filename = "__space-exploration-graphics-5__/graphics/entity/supercomputer/supercomputer-1.png",
           priority = "high",
           width = 320,
           height = 384,
@@ -96,7 +96,7 @@ data:extend {
       layers =
       {
         {
-          filename = "__space-exploration-graphics-5__/graphics/entity/supercomputer/supercomputer-3.png",
+          filename = "__space-exploration-graphics-5__/graphics/entity/supercomputer/supercomputer-1.png",
           priority = "high",
           width = 320,
           height = 384,
@@ -120,7 +120,7 @@ data:extend {
           scale = 0.5,
         },
         {
-          filename = "__space-exploration-graphics-5__/graphics/entity/supercomputer/supercomputer-3-working.png",
+          filename = "__space-exploration-graphics-5__/graphics/entity/supercomputer/supercomputer-1-working.png",
           priority = "high",
           width = 720/9,
           height = 258,
@@ -140,7 +140,7 @@ data:extend {
   {
     type = "item",
     name = "linox-building_linox-supercomputer",
-    icon = "__space-exploration-graphics__/graphics/icons/supercomputer-3.png",
+    icon = "__space-exploration-graphics__/graphics/icons/supercomputer-1.png",
     icon_size = 64,
     subgroup = "production-machine",
     order = "z[lab]-a",
