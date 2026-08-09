@@ -1,4 +1,7 @@
 [![foundrygg.com](https://img.shields.io/badge/foundrygg-4a1402?style=for-the-badge&logo=vercel&logoColor=white)](https://foundrygg.com)[![Discord](https://img.shields.io/badge/Discord-%235865F2.svg?style=for-the-badge&logo=discord&logoColor=white)](https://discord.gg/HgYANakDmY)
+- - - 
+In version 2.0, there is an issue where the Foundry produces incorrect recycling results. You can fix this by using the mod below.
+https://mods.factorio.com/mod/linox-foundry-fix
 - - -
 Planet Linox - Probably the smallest planet in Factorio.
 ==================================================
@@ -56,6 +59,12 @@ Rewards
  * Neodymium permanent magnet inserter
 >By harnessing the immense torque of neodymium permanent-magnet motors, inserter performance can be boosted to revolutionary levels. Their arms move so fast that it’s nearly impossible to track them with the naked eye. You might even get dizzy—so please, kids, don’t try this at home.
 - - -
+Mantle Extrator API
+==================================================
+If you want to prevent the Mantle Extractor from being installed on your own planet, you can add the `linox-no-mantle` surface property with a value of 1 or higher to prevent it from being placed. This feature is supported starting with Linox 1.8.3.
+
+surface_properties = { ["linox-no-mantle"] = 1 }
+- - -
 Recommended companion mods
 ==================================================
  * [Blueprint Sandboxes](https://mods.factorio.com/mod/blueprint-sandboxes) - It makes editing blueprints significantly easier.
@@ -82,4 +91,4 @@ Special Thanks
  * Efremiros - Thank you for providing the Russian translation.
  * [Natha](https://mods.factorio.com/user/natha) - Provided an idea for connecting the two surfaces. Thank you.
  * [FoxLBA](https://mods.factorio.com/user/FoxLBA) - Thank you for maintaining the Recursive Blueprint System, which is a core mechanic of Linox.
- * SkunkMaster - Thank you for providing the example circuit designs and various ideas.
+ * SkunkMaster, zhuyifei1999 - Thank you for providing the example circuit designs and various ideas.

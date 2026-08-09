@@ -81,7 +81,7 @@ __MODULE__.build = function(surface, position, locale)
 
   for _, ghost in pairs(bp_entities) do
     if ghost.valid then
-      _, ett = ghost.silent_revive{raise_revive = (ghost.ghost_name == "blueprint-deployer2")};
+      local _, ett = ghost.silent_revive{raise_revive = (ghost.ghost_name == "blueprint-deployer2")};
       if ett.name == "blueprint-deployer2" then
         __MODULE__.create_book(ett.get_inventory(defines.inventory.chest))
       end
@@ -103,7 +103,7 @@ __MODULE__.build_TAT = function(surface, position)
 
   for _, ghost in pairs(bp_entities) do
     if ghost.valid then
-      _, ett = ghost.silent_revive{raise_revive = (ghost.ghost_name == "blueprint-deployer2")};
+      local _, ett = ghost.silent_revive{raise_revive = (ghost.ghost_name == "blueprint-deployer2")};
       if ett.name == "blueprint-deployer2" then
         __MODULE__.create_book(ett.get_inventory(defines.inventory.chest), rbp_tat.book)
       end

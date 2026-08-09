@@ -17,7 +17,7 @@ data:extend {
       tint = tint,
     }};
 
-    flags = {"placeable-neutral", "player-creation", "filter-directions"},
+    flags = {"placeable-neutral", "player-creation", "filter-directions", "no-automated-item-removal", "no-automated-item-insertion" },
     collision_mask = {layers={object=true, train=true, is_object=true, is_lower_object=true}}, -- collide just with object-layer and train-layer which don't collide with water, this allows us to build on 1 tile wide ground
     tile_buildability_rules =
     {

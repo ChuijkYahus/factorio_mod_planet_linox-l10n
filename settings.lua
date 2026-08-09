@@ -77,7 +77,7 @@ data:extend {
 
   {
     type = "bool-setting",
-    name = "linox-settings_hard-mode_enable-science-pack_aquilo",
+    name = "linox-settings_hard-mode_disable-mantle-extractor",
     setting_type = "startup",
     default_value = false,
     order = "c4",
@@ -85,10 +85,18 @@ data:extend {
 
   {
     type = "bool-setting",
-    name = "linox-settings_hard-mode_enable-science-pack_promethium",
+    name = "linox-settings_hard-mode_enable-science-pack_aquilo",
     setting_type = "startup",
     default_value = false,
     order = "c5",
+  },
+
+  {
+    type = "bool-setting",
+    name = "linox-settings_hard-mode_enable-science-pack_promethium",
+    setting_type = "startup",
+    default_value = false,
+    order = "c6",
   },
 
 

@@ -317,4 +317,4 @@ data:extend {
         },
         ignore_tech_cost_multiplier = true,
       },
-};
+}

@@ -1,4 +1,20 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.8.3
+Date: 9. 8. 2026
+  Minor Features:
+    - Added an option to disable the Mantle Extractor.
+    - AAI Signal Transmission Mod has been changed from a recommended mod to an optional mod.
+    - Added a Mantle Extractor API. Planet creators can now prevent the Mantle Extractor from being placed on their planets if desired.
+
+  Changes:
+    - The Fluid Elevator and Cargo Elevator are now provided even when the No Starter Pack option is selected, as otherwise the game could not be progressed.
+    - Removed mods that have not been updated to version 2.1 from the Optional Mods list.
+
+  Bugfixes:
+    - Fixed an issue where Outlet could be targeted by Inserter.
+    - Fixed an issue where a crash occurred when configuring settings related to the Linox Science Pack.
+
+---------------------------------------------------------------------------------------------------
 Version: 1.8.2
 Date: 30. 7. 2026
   Changes:

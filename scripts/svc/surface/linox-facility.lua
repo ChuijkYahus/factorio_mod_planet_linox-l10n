@@ -184,7 +184,13 @@ __MODULE__.expand_facility = function(level)
     rbp_example.build(surface, {x = 0, y = -64}, loc)
 
 
-    if not settings.startup["linox-settings_hard-mode_no-starter-pack"].value then
+    if settings.startup["linox-settings_hard-mode_no-starter-pack"].value then
+      local box1 = surface.create_entity{name = "steel-chest", force = "player", position = { 11, -60 }}
+      if box1 then
+        box1.insert{name = "linox-building_fluid-elevator", count = 5};
+        box1.insert{name = "linox-building_cargo-elevator", count = 5};
+      end
+    else
       local stor = surface.find_entities_filtered{name = "storage-chest", position = { 0, -64 }, radius = 25}
       if stor then
         stor[1].insert{ name = "chemical-plant", count = 10 }
