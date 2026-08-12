@@ -1,4 +1,13 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.8.6
+Date: 12. 8. 2026
+  Changes:
+    - Changed the Elevator Shortcuts icon.
+
+  Translation:
+    - The Chinese translation has been updated. Special thanks to ChuijkYahus for the contribution!
+
+---------------------------------------------------------------------------------------------------
 Version: 1.8.5
 Date: 9. 8. 2026
   Bugfixes:
