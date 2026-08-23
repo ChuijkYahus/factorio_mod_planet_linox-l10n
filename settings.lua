@@ -99,6 +99,14 @@ data:extend {
     order = "c6",
   },
 
+  {
+    type = "bool-setting",
+    name = "linox-settings_hard-mode_enable-science-pack_infinite",
+    setting_type = "startup",
+    default_value = false,
+    order = "c7",
+  },
+
 
 
   {
@@ -106,7 +114,7 @@ data:extend {
     name = "linox-settings_rbp-example-multiplay-language",
     setting_type = "runtime-global",
     default_value = "auto",
-    allowed_values = {"auto", "en", "ko", "ru"},
+    allowed_values = {"auto", "en", "ko", "ru", "zh-CN"},
   },
 
   
@@ -116,7 +124,7 @@ data:extend {
     name = "linox-settings_rbp-example-local-language",
     setting_type = "runtime-per-user",
     default_value = "auto",
-    allowed_values = {"auto", "en", "ko", "ru"},
+    allowed_values = {"auto", "en", "ko", "ru", "zh-CN"},
   },
 
   {

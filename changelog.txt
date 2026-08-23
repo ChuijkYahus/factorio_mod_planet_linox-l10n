@@ -1,4 +1,13 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.8.7
+Date: 23. 8. 2026
+  Minor Features:
+    - Added a Settings option that lets you choose whether the Linox Science Pack is required for infinite research.
+
+  Translation:
+    - The Blueprint Localization System now supports Chinese.
+
+---------------------------------------------------------------------------------------------------
 Version: 1.8.6
 Date: 12. 8. 2026
   Changes:
