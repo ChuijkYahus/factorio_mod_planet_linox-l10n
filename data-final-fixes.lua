@@ -56,6 +56,7 @@ end
 local function _SETTINGS_enable_science_pack()
   local _enable_aquilo = settings.startup["linox-settings_hard-mode_enable-science-pack_aquilo"].value
   local _enable_promethium = settings.startup["linox-settings_hard-mode_enable-science-pack_promethium"].value
+  local _enable_infinity = settings.startup["linox-settings_hard-mode_enable-science-pack_infinite"].value
 
   if _enable_aquilo or _enable_promethium then
     _add_science_pack()
@@ -78,9 +79,14 @@ local function _SETTINGS_enable_science_pack()
 
         -- 프로메튬이면 프로메튬 팩이 요구될 때 다 넣으면 됨
         -- 아퀼로는 프로메튬 팩이 없어야됨
-
         if (_enable_aquilo and _cryogenic and not _promethium) or (_enable_promethium and _promethium) then
-          _insert_linox_science_pack(t)
+          if t.max_level and t.max_level == "infinite" then 
+            if _enable_infinity then
+              _insert_linox_science_pack(t)
+            end 
+          else
+            _insert_linox_science_pack(t)
+          end
         end
       end
     end
