@@ -4,7 +4,7 @@ local speed_ratio = 4.0
 local entity = table.deepcopy(data.raw["rocket-silo"]["rocket-silo"]);
 entity.name = "linox-building_advanced-rocket-silo";
 
-entity.crafting_speed = 1;
+entity.crafting_speed = 2;
 entity.module_slots = 6;
 entity.rocket_entity = "linox-building_advanced-rocket-silo-rocket";
 entity.minable = {mining_time = 1, result = "linox-building_advanced-rocket-silo"};

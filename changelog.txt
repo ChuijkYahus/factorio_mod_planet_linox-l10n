@@ -1,4 +1,17 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.8.8
+Date: 25. 8. 2026
+  Balancing:
+    - The Linox Science Pack is now produced in batches of 2
+    - Increased the crafting speed of the Advanced Rocket Silo to 2.
+
+  Changes:
+    - Constant Combinators are now generated when entering the Linox Facility for the first time.
+
+  Translation:
+    - Updated the zh-CN locale.
+
+---------------------------------------------------------------------------------------------------
 Version: 1.8.7
 Date: 23. 8. 2026
   Minor Features:

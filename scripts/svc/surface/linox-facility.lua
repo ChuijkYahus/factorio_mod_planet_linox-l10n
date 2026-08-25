@@ -114,6 +114,12 @@ UTIL_create_event_handler(defines.events.on_surface_created, function(event)
       UTIL_ensure_entity(surface, { name = "linox-hidden_reactive-power"}).energy = 1 * 1000 * 1000 * 1000;
     end
 
+    UTIL_ensure_entity(surface, { name = "constant-combinator", position = { 10, -10 }, force = "neutral", create_build_effect_smoke = false, })
+    UTIL_ensure_entity(surface, { name = "constant-combinator", position = { 5, -8 }, force = "neutral", create_build_effect_smoke = false, })
+    UTIL_ensure_entity(surface, { name = "constant-combinator", position = { 9, -7}, force = "neutral", create_build_effect_smoke = false, })
+    UTIL_ensure_entity(surface, { name = "constant-combinator", position = { -8, 8}, force = "neutral", create_build_effect_smoke = false, })
+    UTIL_ensure_entity(surface, { name = "constant-combinator", position = { -6, 9}, force = "neutral", create_build_effect_smoke = false, })
+
     script.raise_event("linox-custom-event_on-surface-complete", {surface = surface,});
   end
 end)
